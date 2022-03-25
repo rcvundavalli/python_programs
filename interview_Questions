@@ -3,3 +3,13 @@ Python Interview coding programs
 l = [10,20,30,45,35,55,65,76,87,98,99]
 rev = [l[i:i+3][::-1] for i in range(0,len(l),3)]
 print([i for j in rev for i in j])
+
+
+###Sort data based on 2nd column.
+with open("employee.csv") as emp:
+    data = [i.strip() for i in emp.readlines()]
+    for i in data:
+        print(i)
+    sdata = sorted(data,key=lambda x:x.split(",")[2])
+    for i in sdata:
+        print(i)
