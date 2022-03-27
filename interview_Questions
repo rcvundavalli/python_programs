@@ -13,3 +13,9 @@ with open("employee.csv") as emp:
     sdata = sorted(data,key=lambda x:x.split(",")[2])
     for i in sdata:
         print(i)
+
+###Reverse every k(3) chars in the string.
+str = "bananaas"
+k=3
+for i in range(0,len(str),k):
+    print("".join(str[i:i+k][::-1]),end="")
